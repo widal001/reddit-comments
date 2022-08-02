@@ -32,7 +32,7 @@ class MySuite extends munit.FunSuite {
     val exp_doubles = List(2, 4, 6)
     def double(x: Int) = x * 2
     // execution
-    val rdd = get_rdd
+    val rdd = Main.main()
     val out_count = rdd.count()
     val out_doubles = rdd.map(double).collect().sorted.toList
     // validation

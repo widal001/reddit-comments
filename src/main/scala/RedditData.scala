@@ -1,16 +1,17 @@
 package reddit
 
-object Aliases:
+object Aliases {
   type Id = String
   type Username = String
-import Aliases.* // Allows type aliases to be accessed directly
+}
+import Aliases._ // Allows type aliases to be accessed directly
 
 case class Comment(
     author: Username, // Username of the author
     content: String, // Content of the comment
     controversiality: Int,
     subreddit: String, // Name of subreddit in which the comment was posted
-    subreddit_id: Id, // Id of subreddit in wihch the comment was posted
+    subreddit_id: Id, // Id of subreddit in which the comment was posted
     post_id: Id, // Id of post on which comment was posted
     parent_id: Id, // Id of comment under which this comment was posted
     id: Id, // Id of the comment
