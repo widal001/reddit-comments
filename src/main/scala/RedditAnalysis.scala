@@ -9,7 +9,7 @@ import org.apache.log4j.{Logger, Level}
 object Main {
   def main(): RDD[Int] = {
     import org.apache.spark.SparkContext._
-    
+
     // Reduce Spark logging verbosity
     Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
 
